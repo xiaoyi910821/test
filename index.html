@@ -2,1147 +2,323 @@
 <html>
 
 <head>
-  <title>Kelsey Zhou homepage</title>
+  <title>TCC demo page</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Poiret+One|Indie+Flower|Shadows+Into+Light|Josefin+Sans|Architects+Daughter|Covered+By+Your+Grace|Gloria+Hallelujah' rel='stylesheet' type='text/css'>
-  <link href="css/fold-demo.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/normalize.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link rel="stylesheet" href="css/examples.css" type="text/css">
-  <link rel="stylesheet" type="text/css" href="css/pfold-demo.css" />
-  <link rel="stylesheet" type="text/css" href="css/pfold.css" />
-  <link rel="stylesheet" type="text/css" href="css/custom2.css" />
-  <link rel="stylesheet" type="text/css" href="css/common.css" media="all">
-  <link rel="stylesheet" type="text/css" href="css/gallery.css">
-  <link rel="stylesheet" type="text/css" href="css/slider-style.css" />
-  <link rel="stylesheet" type="text/css" href="css/show-photo.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="css/transitions.css" media="all" />
-  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
-  <link rel="stylesheet" href="css/timeline-style.css">
-   <link rel="stylesheet" type="text/css" href="css/hover.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="dist/js/bootstrap-select.js"></script>
 
-
-
-  <script type="text/javascript" src="js/_dependent/greensock/TweenMax.min.js"></script>
-  <script type="text/javascript" src="js/_dependent/jquery.min.js"></script>
-  <script type="text/javascript" src="js/_examples/general.js"></script>
-  <script type="text/javascript" src="js/_examples/highlight.pack.js"></script>
-  <script type="text/javascript" src="js/_examples/modernizr.custom.min.js"></script>
-  <script type="text/javascript" src="js/jquery.scrollmagic.js"></script>
-  <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script>
-  <script type="text/javascript" src="PFold/js/modernizr.custom.79639.js"></script> 
- 
-  <script src="draw/vendor/jquery-2.1.1.min.js"></script>
-    <script src="draw/jquery.lazylinepainter-1.7.0.min.js"></script>
-
-    <script src="draw/examples/js/svgdata.js"></script>
-    <script src="timeline/js/main.js"></script>
-    <script src="timeline/js/modernizr.js"></script>
-
-
-
-
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
+  <link rel="stylesheet" href="dist/css/bootstrap-select.css">
+  <link rel="stylesheet" href="css/w3.css">
 
 </head>
 <style>
-html{
- height: 100%;
- width: 100%;
-  cursor: url(images/chalk.png),auto;
-}
-body.mainpage{
 
-  background-image: url(images/blackboard.jpg);
+body{
+  background-color: #282828 ;
+    margin: 0;
+  }
+*:focus {
+    outline: none;
+}
+* a{
+  text-decoration: none;
+  color: black;
+}
+.header{
+  background-color: white;
+  text-align: center;
+    height: auto;
+  width: 100%;
+  box-shadow: 0px 0px 5px 0px silver inset;
+}
+.header img{
+  width: 60%;
+  padding-top: 2%;
+}
+.title{
+  line-height: 1em;
+  padding: 3%;
+  text-shadow:0px 0px 5px silver;
+    font-family: Century Gothic, sans-serif;
+}
+.title em:before, .title em:after{
+    content: '"';
+}
+.title em{
+  font-size: 1.1em;
+  color: gray;
+
+}
+.title h3{
+
+  opacity: 0.8;
+  letter-spacing: 1px;
+  font-size:3em;
+}
+
+
+.info{
+  font-family: Century Gothic, sans-serif;
+  height: auto;
+  min-height: 400px;
   background-color: #282828;
-   height: 100%;
-  width: 100%;
-    margin: 0;
-    border: none;
-    overflow-x:hidden;
-
-    
-  }
-#resume-pannel{
-  overflow-y:hidden;
-  overflow-x:hidden;
-  position: absolute;
-  width: 100%;
-  display: none;
-    right: 0;
-    z-index: 1000;
-   height: 100%;
-   box-shadow: 0px 0px 5px 2px silver inset;
-  }
-  #resume-pannel object{
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-  }
-
-
-#bg{
- 
-  background-repeat: no-repeat;
-  min-height: 100%;
-  height: auto;
-  width: 100%;
-
-  background-size: cover;  
-}
-#bg img{
-  position: absolute;
-}
-#content{
-    opacity: 0;
+  text-align: center;
 }
 
-@media (max-width: 800px ) {
-
-}
-#blackboard{
-  
+form{
   width: 100%;
 }
-#overlay2{
-  position: absolute;
-  background-image: url(images/blackboard.jpg);
+input{
   width: 100%;
-  height: 100%;
-  opacity: 0;
-}
+  border-radius: 3px;
+  height: 35px;
+  border:1px solid silver;
 
-#edu-title{
-  font-size: 60px;
-  font-family: 'Indie Flower', cursive;
-  
 }
- #edu-subtitle{
-  font-size: 30px;
-  font-family: 'Indie Flower', cursive;
- }
-#scrollme{
-    font-family: 'Indie Flower', cursive;
-    font-size: 40px;
-}
-svg text.time, .info{
+#button{
+  width: 20%;
+  min-height: 40px;
+  height: 40px;
+  border:1px solid silver;
+  background-color: #e8e8e8;
+  border-radius: 5px;
+  font-size: 18px;
   text-transform: uppercase;
-  stroke:white;
-  opacity: 0;
-  font-family: 'Architects Daughter', cursive;
+  cursor: not-allowed;
+  color:silver;
+  margin:3% 0 0 25%;
 }
-svg text.time{font-size: 30px;  fill:#585858 ;  stroke-width:1;}
-svg text.info{font-size: 15px;  stroke-width:0.5;}
-svg image{
-  opacity: 0;
+#span{
+  color:white;
+    font-size: 12px;
+  font-style: italic;
+  visibility: hidden;
+  }
+@media only screen and (max-width: 1200px) {
+  #button{
+    margin-left: 20%;
+  }
 }
-svg {
-  height: auto;
-  width:100%;
-   z-index: -99;
+
+
+@media only screen and (max-width: 790px) {
+    .header img{
+  width: 80%;
+  }
+  .title em{
+    font-size: 0.9em;
+  }
+  .title h3{
+    font-size: 2.1em;
+  }
+    #button{
+    margin-left: 30%;
+  }
 
 }
-#git{
-  opacity: 0;
-}
-.uc-initial-content img{
-  width: 100%;
-  height: 100%;
-}
- #myweb{
-  width: 100%;
-  height: 100%;
-  left: 0;
-  position: absolute;
+
+@media only screen and (max-width: 650px) {
+    .title h3{
+    font-size: 1.7em;
+  }
+      #button{
+    margin-left: 40%;
+  }
+
 }
 </style>
-<body class="mainpage">
-
-<div id="resume-pannel">
-   <object type="text/html" data="../kelsey/resume.html">
-    </object>
-
-</div><!-- end resume -->
-
-   <div id="bg">
-    
-        <div class="content">
-        <div class="logo-wrap">
-
-      <div id="wel-title">Welcome To My Home Page</div>
-            <div id="resume"><a href="#">See My Resume</a></div>
-        <div id="learn-more">Learn More</div>
-        <div id="welcome" >
-            <a href="#" onclick="freeze()" id="freeze">Take a Rest</a>
-        </div><!-- end welcome -->
+<body >
+  <section class="header">
+    <img src="header.gif" alt="nan"/>
+    <div class="title">
+      <em>Versatile suite of CRM Producs, keeping your customers engaged</em><br>
+      <h3>Online Appointment Scheduler</h3>
+    </div>
+  </section>
 
 
-            <div id='bottom1' ></div>
-            <div id='bottom2'  ></div>
-          <div id='top1' ></div>
-          <div id='top2' ></div>
-          <div id='rose1' ></div>
+  <section class="info">
+
+<ul class="w3-navbar w3-black">
+  <li><a href="#" style="background-color:#282828;color:white">Vehicle</a></li>
+  <li><a href="#" >Repaires</a></li>
+  <li><a href="#" >Maintenance</a></li>
+  <li><a href="#" >Date & Time</a></li>
+  <li><a href="#" >Confirm</a></li>
+</ul>
+
+
+
+    <div class="container">
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label for="basic" class="col-lg-4 control-label">Make:</label>
+      <div class="col-lg-5">
+        <select id="basic" class="selectpicker show-tick form-control" data-live-search="true">
+          <option selected value="">--select make--</option>
+          <option value="1">Audi</option>
          
-           <div id='top3' ></div>
-
-            <div id='middle1' ></div>
-<svg id="dragon" viewbox="0 0 1400 250" version="1.1"></svg>
-
-             <div id='sleep'></div>
-             
-              <img id="catsleep"style="width:35%;bottom:0;left:0" ></img>
-             <script>
-              setTimeout(function(){
-              document.getElementById("catsleep").src="flower/sleep.gif";
-              document.getElementById("sleep").style.display="none";}, 4600);
-            function freeze()
-             {
-              var $catsleep=document.getElementById("catsleep");
-              var $freeze=document.getElementById("freeze");
-              if($freeze.innerHTML=="Take a Rest"){
-                $catsleep.src="flower/freeze.gif";
-                $freeze.innerHTML="Move";
-                
-              } 
-              else{
-                $freeze.innerHTML="Take a Rest";
-                $catsleep.src="flower/sleep.gif";
-                //alert(freeze.innerHTML);
-              }   //alert($freeze.innerHTML);
-           //  document.getElementById("resume-pannel").style.display="none";
-         }
-
-             </script>
-        </div>
-    </div>
-
-        <script type="text/javascript">
-
-      (function( $ ){
-
-        $(document).ready(function(){
-          $("#wel-title").fadeTo(1500,1);
-        
-           $("#resume").animate({
-      top:"38%",
-      opacity:"1"
-
-    },2000);
-            $("#learn-more").animate({
-      top:"44%",
-      opacity:"1"
-
-    },2400);
-
-    $("#welcome").animate({
-      top:"50%",
-      opacity:"1"
-
-    },3000);
-
-    setTimeout(function(){$("#flowerA, #flowerB").fadeTo(3500,0.9);}, 1500);
-    
-
-          /**
-           * Setup your Lazy Line element.
-           * see README file for more settings
-           */
-
-               $("#bottom1, #bottom2, #rose1").lazylinepainter({
-                    'svgData': svgData,
-                    'strokeWidth': 7,
-                    'strokeColor': "white",
-                  'ease': 'easeInOutQuad',
-                  'delay':1200
-                });
-               $("#bottom1, #bottom2, #rose1").lazylinepainter('paint');
-
-                 $("#welcome").lazylinepainter({
-                    'svgData': svgData,
-                    'strokeWidth': 0.8,
-                    'strokeColor': "white",
-                  'ease': 'easeInOutQuad',
-                  'delay':2100
-                });
-               $("#welcome").lazylinepainter('paint');
-
-               $("#dragon").lazylinepainter({
-                    'svgData': svgData,
-                    'strokeWidth': 2.3,
-                    'strokeColor': "white",
-                  'ease': 'easeInOutQuad',
-                  'delay':2000
-                });
-                $("#sleep").lazylinepainter({
-                    'svgData': svgData,
-                    'strokeWidth': 2.4,
-                    'strokeColor': "white",
-                  'ease': 'easeInOutQuad',
-                  'delay':2000
-                });
-
-
-               $("#sleep, #dragon").lazylinepainter('paint');
-
-
-
-
-          $("#middle1").lazylinepainter({
-                    'svgData': svgData,
-                    'strokeWidth': 7,
-                    'strokeColor': "white",
-                  'ease': 'easeInOutQuad',
-                    'delay':1000
-                });
-                $("#middle1").lazylinepainter('paint');
-
-          $("#top1, #top2,#top3").lazylinepainter({
-                    'svgData': svgData,
-                    'strokeWidth': 7,
-                    'strokeColor': "white",
-                  'ease': 'easeInOutQuad',
-                    'delay':1100
-                });
-                 $("#top1, #top2,#top3").lazylinepainter('paint');
-        })
-             
-
-              
-             
-     var baloon = $('#welcome, #resume, #learn-more, #wel-title');
-
-   function runIt() {
-       baloon.animate({top:'+=8'}, 1000);
-       baloon.animate({top:'-=8'}, 1000, runIt);
-   }
-   setTimeout(function(){runIt();}, 4200);
-
-      })( jQuery );
-
-    </script>
-
-    <img src="flower/haitang.svg" id="flowerA" style="float:left; width:30%;top:0;position:absolute"></img>
-      <img src="flower/flower-tree.png" id="flowerB" style="right:0;bottom:0;width:16%"></img>
-    
-  </div><!--end bg-->
-
-
-      <div class="scrollContent">
-        
-        <section class="demo" id="blackboard">
-          <div id="overlay2"></div>
-          <div id="trigger1" class="spacer s0"></div>
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700">
-                      <path id="word" style="stroke-linecap: round; stroke-linejoin: round;width:100%"
-              fill="none" stroke="white" stroke-width="1.5" 
-              d="M0 80 Q180 780 420 180 Q500 -25 750 170 Q850 250 950 160 T1150 170 1100 420 T700 520 600 590"/>
-
-
-
-            <text x="60" y="100" fill="white" id="edu-title">Education 2009-2016</text>
-            <text x="60" y="140" fill="white" id="edu-subtitle">Scroll down slowly to see my academic steps</text>
-
-            <text x="55" y="130" fill="white" class="time" id="nc">2009 - 2011</text>
-            <text x="55" y="160" fill="white" class="info" id="nc">North China University of Technology</text>
-            <text x="55" y="200" fill="white" class="info" id="nc">computer and science major</text>
-            <text x="55" y="230" fill="white" class="time" id="nc">beijing</text>
-            <text x="150" y="380" fill="white" class="info" id="nt">gpa:3.60</text>
-            <text x="140" y="400" fill="white" class="info" id="nt">teaching assistant</text>
-            <text x="140" y="420" fill="white" class="info" id="nt">web designer</text>
-             <text x="220" y="480" fill="white" class="info" id="nt">study aboard</text>
-              <text x="230" y="520" fill="white" class="info" id="nt">bye ncut</text>
-               <text x="230" y="540" fill="white" class="info" id="nt">hello cmu</text>
-
-             <text x="700" y="110" fill="white" class="time" id="cc">2011 - 2013</text>
-             <text x="700" y="130" fill="white" class="info" id="cc">central michigan university</text>
-             <text x="770" y="150" fill="white" class="info" id="cc">so cold at winter!</text>
-             <text x="630" y="170" fill="white" class="info" id="cc">GPA:3.30</text>
-             <text x="630" y="190" fill="white" class="info" id="cc">BS degree</text>
-             <text x="630" y="220" fill="white" class="info" id="cc">computer science major</text>
-              <text x="630" y="240" fill="white" class="info" id="cc">Business Info system minor</text>
-             <text x="630" y="270" fill="white" class="time" id="cc">michigan</text>
-
-             <text x="1200" y="270" fill="white" class="info" id="snow">bye CMU</text>
-             <text x="1190" y="290" fill="white" class="info" id="snow">hello purdue</text>
-
-
-
-            <text x="800" y="410" fill="white" class="time" id="pc">2013 - 2016</text>
-            <text x="800" y="440" fill="white" class="info" id="pc">Purdue University</text>
-            <text x="750" y="460" fill="white" class="info" id="pc">computer and info tech major</text>
-            <text x="800" y="480" fill="white" class="info" id="pt">MS Degree</text>
-            <text x="630" y="480" fill="white" class="time" id="pt">Indiana</text>
-            <text x="800" y="510" fill="white" class="info" id="pt">GPA:3.45</text>
-
-
-            <text x="1000" y="520" fill="white" class="info" id="pt">graduate assistant</text>
-            <text x="1000" y="540" fill="white" class="info" id="pt">thesis: measurement on hackers'behaviors</text>
-            <text x="1000" y="560" fill="white" class="info" id="pt">and psychology</text>
-
-            <text x="900" y="670" fill="white" class="info" id="scrollme">keep scroll down</text>
-
-             <text x="600" y="690" fill="white" class="info" id="bye"style="font-size:25px">bye school life</text>
-
-                         <image xlink:href="images/edu-book.svg" x="650" y="0"  height="300px" width="200px" id="edu-title"/>
-            <image xlink:href="images/airplane.svg" x="300" y="170"  height="280px" width="280px" transform='rotate(30 430 300)'id="im"/>
-            <image xlink:href="images/snow.svg" x="1150" y="90" height="150px" width="200px" id="snow"/>
-            <image xlink:href="images/snow2.svg" x="1020" y="160" height="100px" width="200px" id="snow"/>
-            <image xlink:href="images/cap.svg" x="1150" y="300" height="230px" width="150px" id="pc"/>
-
-            <image xlink:href="images/train.svg" x="600" y="520" height="130px" width="130px" id="train"/>
-             <image xlink:href="images/book.gif" x="50" y="430" height="200px" width="200px" id="book" />
-          
-          </svg>
-          <script>
-            $(document).ready(function($) {
-              function pathPrepare ($el) {
-                var lineLength = $el[0].getTotalLength();
-                $el.css("stroke-dasharray", lineLength);
-                $el.css("stroke-dashoffset", lineLength);
-              }
-
-              var $word = $("path#word");
-              //var $dot = $("path#dot");
-
-              // prepare SVG
-              pathPrepare($word);
-             // pathPrepare($dot);
-
-              // init controller
-              var controller = new ScrollMagic();
-
-              // build tween
-              var tween = new TimelineMax()
-                .add(TweenMax.to($word, 1, {"stroke-dashoffset": 0, ease:Linear.easeNone})) // draw word for 0.9
-               // .add(TweenMax.to($dot, 0.1, {"stroke-dashoffset": 0, ease:Linear.easeNone}))  // draw dot for 0.1
-                .add(TweenMax.to("path", 1, {stroke: "white", ease:Linear.easeNone}), 0);     // change color during the whole thing
-
-              // build scene
-              var scene = new ScrollScene({triggerElement: "#trigger1", duration: 250, tweenChanges: true})
-                      .setTween(tween)
-                      .addTo(controller);
-
-              // show indicators (requires debug extension)
-              //scene.addIndicators();
-            });
-          </script>
-        </section>
-        <div class="spacer s_viewport"></div>
+          <option value="2">BMW</option>
+          <option value="3">Carmery</option>
+          <option value="4">Ford</option>
+          <option value="5">Lincoln</option>
+          <option value="6">Mercury</option>
+        </select>
       </div>
-      <img id="bridge" src="images/bridge.gif"></img>
-           <a href="https://github.com/xiaoyi910821" ><img id="git"style="position: absolute; right: 0; border: 0" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
-      <div id="gallery">
+      <label for="basic" class="col-lg-1 opt">required</label>
 
-          <div id="hello" style="font-size:30px">HELLO NEW LIFE</div>
-
-          <div id="gallery-title" class="gallery-title">
-            My name is kelsey zhou<br>
-            Currently I live at san francisco bay area, California. <br>
-            I am looking for full-time job at the field of software engineering.<br>
-
-            <img src="images/forbidden.gif" id="time-title" style="float:right;width:35%;padding-top:2%;padding-right:5%"/>
-             <div id="time-title" class="time-title">view my timeline and projects</div>
-            </div><!-- end gallery-title -->
-
-
-
-           <section id="cd-timeline" class="cd-container">
-    <div class="cd-timeline-block">
-      <div class="cd-timeline-img cd-picture">
-        <img src="images/school.svg" >
-      </div> <!-- cd-timeline-img -->
-
-      <div class="cd-timeline-content" >
-        <div class="left-pannel">
-          <h2>Teaching Assistant at NCUT</h2>
-          <p>The major responsibilies include assisting instructor with classes, reviewing lecture slides, Invigilating exams, grading tests and homeworks and etc.</p>
-          <span class="cd-date">Sept 01, 2011</span>
-      </div><!-- end left pannel -->
-
-      </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
-
-    <div class="cd-timeline-block">
-      <div class="cd-timeline-img cd-second">
-        <img src="images/design.png" >
-      </div> <!-- cd-timeline-img -->
-
-      <div class="cd-timeline-content">
-      <div class="left-pannel" id="left-skill">
-        <p>Skills & Tools: <br>
-          Adobe Illustrator, Adobe Dreamweaver<br>
-          C/C++, HTML/CSS, Javascript
-        </p>
-      </div>
-
-        <div class="right-pannel">
-        <h2>Web UX Design</h2>
-        <p>Assist my Instructor to design course-related website. Using different frameworks to build the basic structure of the website.</p>
-        <span class="cd-date">Jun 07, 2012</span>
     </div>
-      </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
+  </form>
 
-    <div class="cd-timeline-block">
-      <div class="cd-timeline-img cd-company">
-        <img src="images/company.png" >
-      </div> <!-- cd-timeline-img -->
+  <hr>
 
-      <div class="cd-timeline-content">
-        <div class="right-pannel" id="right-skill">
-          Skills & Tool:<br>
-          Assembly, Python, JAVA, jQuery<br>
-          Git, Sublime, NetBean
-        </div>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label for="basic" class="col-lg-4 control-label">Model Year</label>
 
-        <div class="left-pannel">
-        <h2>Internship at Chinese Academy of Sciences</h2>
-        <p>Assist on application development for projects aimed to enhance information security, such as finding and fixing bugs that causes vulneralbilities of the system<br>
-          Consult with campus organizations, advising them on how to use computers to increase efficiency.</p>
-        <span class="cd-date">Jun 01, 2013</span>
-    </div><!-- end left-pannel -->
-      </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
-
-    <div class="cd-timeline-block" style="margin:0">
-      <div class="cd-timeline-img cd-web">
-        <img src="images/page.png" >
-      </div> <!-- cd-timeline-img -->
-
-      <div class="cd-timeline-content" style="width:45%">
-        <div class="right-pannel" style="height:300px;background:none;box-shadow:none">
-        <section class="demo-2">
-          <div class="uc-container">
-            <div class="uc-initial-content">
-              <img src="images/pre-web.png" />
-              <span class="icon-eye">
-                <div class="mask mask-1"></div> 
-                <div class="mask mask-2"></div>
-                <div class="content"><br>my previous website<br>click me to see the demo page</div>
-              </span>
-            </div>
-            <div class="uc-final-content" >
-                 <object type="text/html" data="http://kelseyzhou.com" id="myweb">
-                  </object>
-              <div class="title"><h4>kelseyzhou.com</h4>scroll or click<a href="http://kelseyzhou.com" target="blank" class="icon-link"></a></div>
-              <span class="icon-cancel"></span>
-            </div>
-          </div><!-- / uc-container -->               
-      </section>
-          </div>
-      </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
-
-    <div class="cd-timeline-block">
-      <div class="cd-timeline-img cd-teach">
-        <img src="images/teaching.png" >
-      </div> <!-- cd-timeline-img -->
-
-      <div class="cd-timeline-content">
-
-        <div class="right-pannel" id="right-skill">
-          Skills & Tools:<br>
-          cryptography, Network security<br>
-          FTK, Splunk, BlackLite, Katana Lanterns, IDA Pro
-        </div>
-
-        <div class="left-pannel">
-        <h2>Graduate Assitant at Purdue</h2>
-        <p>Work for Dr. Marc Rogers to proposal undergraduate security program curiosum and analyze documents related to our department works. <br>Dr. Marc Rogers is an excellent forensics experts and psychologist. As his students, our group used FTK and Lanterns to examine suspect's digital devices and then investigate the case.</p>
-               <span class="cd-date">May 05, 2014</span>
-    </div>
-      </div> <!-- cd-timeline-content -->
-
-
-
-    <div class="cd-timeline-block" >
-      <div class="cd-timeline-img cd-web">
-        <img src="images/page.png" >
-      </div> <!-- cd-timeline-img -->
-
-      <div class="cd-timeline-content" style="width:45%">
-        <div class="left-pannel" style="height:300px;background:none;box-shadow:none">
-         <section class="demo-2">
-          <div class="uc-container">
-            <div class="uc-initial-content">
-              <img src="images/long-web.png" />
-              <span class="icon-eye">
-                <div class="mask mask-1"></div> 
-                <div class="mask mask-2"></div>
-                <div class="content"><br>responsive website designed for Long Zhen<br>click me to see the demo page</div>
-              </span>
-            </div>
-            <div class="uc-final-content">
-                  <object type="text/html" data="http://lzhen.info/index" id="myweb">
-                  </object>
-              <div class="title"><h4>lzhen.info</h4> by Kelsey Zhou <a href="http://xiaoyizhou.info/developer/index.html" target="blank" class="icon-link"></a></div>
-              <span class="icon-cancel"></span>
-            </div>
-          </div><!-- / uc-container -->               
-      </section>
-
-
-
+      <div class="col-lg-5">
+        <select id="basic" class="selectpicker show-tick form-control" data-live-search="true">
+          <option selected value="">--select year--</option>
+          <option value="1">2016</option>
+          <option value="2">2015</option>
+          <option value="3">2014</option>
+          <option value="4">2013</option>
+          <option value="5">2012</option>
+          <option value="6">2011</option>
+        </select>
       </div>
-      </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
-
-
-        <div class="cd-timeline-block">
-      <div class="cd-timeline-img cd-location">
-        <img src="images/computer.png" >
-      </div> <!-- cd-timeline-img -->
-
-      <div class="cd-timeline-content">
-
-        <div class="left-pannel" id="left-skill">
-          Skills & Tools:<br>
-          PHP<br>
-          Laravel, Bootstrap, Angular.js, Backbone.js, Drupal<br>
-          AJAX, JSON, XML<br>
-          MySQL, SQLite
-        </div>
-        <div class="right-pannel">
-        <h2>Web Developer</h2>
-        <p>In this project, I use one-way communication to reduce the communication burden meanwhile verifying
-          sender's certification. <br>Receivers can verify sender's identity without sending extra request in order to
-          prevent man in the middle attack. This project focus more at back end.</p>
-           <img src="images/frozen.png" />
-
-        <a href="Presentation.pdf" target="_blank" class="cd-read-more">read more </a> <a href="https://bitbucket.org/xiaoyizhou/anti-phishing" target="blank" class="cd-read-more">see source code</a>
-        <span class="cd-date">Aug 14, 2014</span>
-        </div>
-      </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
-
-
-
-    <div class="cd-timeline-block">
-      <div class="cd-timeline-img cd-location">
-        <img src="images/design2.png" >
-      </div> <!-- cd-timeline-img -->
-
-      <div class="cd-timeline-content">
-       <div class="right-pannel" id="right-skill">
-        Skills & Tools:<br>
-        KnockoutJS, D3.js, Foundation<br>
-        HTML5 Canvas, SVG, Inkscape
-      </div>
-
-        <div class="left-pannel">
-        <h2>Front-End Engineer at EW2STUDY Inc.</h2>
-        <p>Design and maintain the new webpage for cschedule software. Focus more on front end. See right side.<br>(All pictures and texts are used for test)</p>
-      <span class="cd-date">Oct 26, 2015</span>
+      <label for="basic" class="col-lg-1 opt">required</label>
     </div>
-      </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
+  </form>
 
-      <div class="cd-timeline-block" style="margin:0">
-      <div class="cd-timeline-img cd-final">
-        <img src="images/design.png" >
-      </div> <!-- cd-timeline-img -->
+    <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label for="basic" class="col-lg-4 control-label">Model</label>
 
-      <div class="cd-timeline-content" style="width:45%">
-  
-        <div class="right-pannel" style="height:300px;background:none;box-shadow:none">
-         <section class="demo-2">
-          <div class="uc-container" id="test">
-            <div class="uc-initial-content">
-              <img src="images/cschedule.png"  />
-              <span class="icon-eye" id="unmute">
-                <div class="mask mask-1"></div> 
-                <div class="mask mask-2"></div>
-                <div class="content"><br>responsive website designed for cschedule<br>click me to see the demo version</div>
-              </span>
-            </div>
-            <div class="uc-final-content" >
-                 <object type="text/html" data="http://xiaoyizhou.info/cschedule/home.html" id="myweb">
-                  </object>
-              <div class="title"><h4>cschedule demo page</h4> by Kelsey Zhou <a href="http://xiaoyizhou.info/cschedule/home.html" target="blank" class="icon-link"></a></div>
-              <span class="icon-cancel" onclick="mute()"></span>
-            </div>
-          </div><!-- / uc-container -->               
-      </section>
-         </div> <!-- cd-timeline-content -->
-  </div><!-- end right-pannel -->
-    </div> <!-- cd-timeline-block -->
+      <div class="col-lg-5">
+        <select id="basic" class="selectpicker show-tick form-control" data-live-search="true">
+          <option selected value="">--select model--</option>
+          <option value="1">ILX</option>
+          <option value="2">MDX</option>
+          <option value="3">RDX</option>
+          <option value="4">RLX</option>
+        </select>
+      </div>
+      <label for="basic" class="col-lg-1 opt">required</label>
+    </div>
+  </form>
 
-        <div class="cd-timeline-block">
-      <div class="cd-timeline-img cd-final">
-        <img src="images/design2.png" >
-      </div> <!-- cd-timeline-img -->
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label for="basic" class="col-lg-4 control-label">Vehicle Configuration</label>
 
-      <div class="cd-timeline-content">
-      <div class="right-pannel" id="right-skill">
-          Skills & Tools:<br>
-          Wordpress<br>
-          Node.js, D3.js<br><br>
-          <a href="xiaoyizhou.info/developer/d3.html" style="color:white;text-decoration:none">short demo here</a>
-        </div>
+      <div class="col-lg-5">
+        <select id="basic" class="selectpicker show-tick form-control" data-live-search="true">
+          <option selected value="">--select config--</option>
+          <option value="1">V5 auto</option>
+         
+          <option value="2">V6 auto</option>
+          <option value="3">I don't know</option>
+        </select>
+      </div>
+    </div>
+  </form>
 
-        <div class="left-pannel">
-        <h2>Web Developer at Factr. Organization</h2>
-        <p>As a front-end engineer, my major responsilibity is to design and maintain the website for factr.org</p>
- <span class="cd-date">Jan 19, 2016</span>
-      </div> <!-- cd-timeline-content -->
-    </div> <!-- cd-timeline-block -->
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label for="basic" class="col-lg-4 control-label">Vehicle Configuration:</label>
 
+      <div class="col-lg-5">
+        <input type="number" name="mileage" placeholder="  00"/>
+      </div>
+    </div>
+  </form>
 
-  </section> <!-- cd-timeline -->
-  <!--<img src="images/pop.gif" style="opacity:0.7;margin-bottom:19%" />-->
-
-<div id="cf">
-  <img src="images/girl.svg" class="bottom" style="width:47%;padding-top:4%" />
-  <img src="images/london.svg" style="width:75%;opacity:0" />
-  <img class="top" src="images/london.svg" />
-</div>  
-
-        <div id="self" class="gallery-title">
-            <em>I am friendly, diligent, and vivid. I love cat.<br>
-              My hobbies include ski, travel, and eating delicious food.<br>
-              My field of study is information security and software programming.<br>
-              feel free to contact me if you have any questions<br><br>
-
-              <a href="#" id="go-top">Go to top </a> or <a href="#!" id="loadmore">Load more photos</a>
-          </em>
-
-        </div><!-- end gallert-title agian -->
-        <div class="show-photo">
-        <section class="Collage effect-parent">
-          <div class="Image_Wrapper" data-caption="hearst castle">
-            <a><img src="data1/images/q.jpg" width:"600px" height:"600px"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Yellowstone National Park">
-            <a><img src="data1/images/p.jpg" width:"100" height:"200"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Cancun-Mexico">
-            <a><img src="data1/images/c.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Yellowstone National Park">
-            <a><img src="data1/images/d.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Cancun-Mexico">
-            <a><img src="data1/images/e.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Cancun-Mexico">
-            <a><img src="data1/images/f.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Trip to Cali">
-            <a><img src="data1/images/g.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Cancun-Mexico">
-            <a><img src="data1/images/w.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Yellowstone National Park">
-            <a><img src="data1/images/i.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="San Diego">
-            <a><img src="data1/images/j.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="California No.1">
-            <a><img src="data1/images/k.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Yellowstone National Park">
-            <a><img src="data1/images/l.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="California No.1">
-            <a><img src="data1/images/m.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="hearst castle">
-            <a><img src="data1/images/n.jpg"></a>
-          </div>
-           <div class="Image_Wrapper" data-caption="Cancun-Mexico">
-            <a><img src="data1/images/o.jpg"></a>
-          </div>
-                     <div class="Image_Wrapper" data-caption="San Francisco">
-            <a><img src="data1/images/u.jpg"></a>
-          </div>
-                     <div class="Image_Wrapper" data-caption="Trip to Cali">
-            <a><img src="data1/images/z.jpg"></a>
-          </div>
-                     <div class="Image_Wrapper" data-caption="Yellowstone National Park">
-            <a><img src="data1/images/y.jpg"></a>
-          </div>
-                     <div class="Image_Wrapper" data-caption="Yellowstone National Park">
-            <a><img src="data1/images/a.jpg"></a>
-          </div>
-                     <div class="Image_Wrapper" data-caption="Yellowstone National Park">
-            <a><img src="data1/images/v.jpg"></a>
-        </section>
-      </div><!-- end show mini photos -->
-
-        
-    <div id="wowslider-container1">
-  <div class="ws_images"><ul>
-    <li><img src="data1/images/1.jpg"  id="wows1_0"/></li>
-    <li><img src="data1/images/2.jpg"  id="wows1_1"/></li>
-    <li><img src="data1/images/3.jpg"  id="wows1_2"/></li>
-    <li><img src="data1/images/4.jpg"  id="wows1_3"/></li>
-    <li><img src="data1/images/5.jpg"  id="wows1_4"/></li>
-    <li><img src="data1/images/6.jpg"  id="wows1_5"/></li>
-    <li><img src="data1/images/7.jpg"  id="wows1_6"/></li>
-    <li><img src="data1/images/8.jpg"  id="wows1_7"/></li>
-    <li><img src="data1/images/9.jpg" id="wows1_8"/></li>
-    <li><img src="data1/images/10.jpg"  id="wows1_9"/></li>
-    <li><img src="data1/images/11.jpg"  id="wows1_10"/></li>
-    <li><img src="data1/images/12.jpg"  id="wows1_11"/></li>
-    <li><img src="data1/images/13.jpg"  id="wows1_12"/></li>
-    <li><img src="data1/images/14.jpg" id="wows1_13"/></li>
-  </ul></div>
-  <div class="ws_thumbs">
-<div>
-    <a href="#!" ><img src="data1/tooltips/1.jpg" /></a>
-    <a href="#!" ><img src="data1/tooltips/2.jpg" /></a>
-    <a href="#!" ><img src="data1/tooltips/3.jpg" /></a>
-    <a href="#!" ><img src="data1/tooltips/4.jpg"  /></a>
-    <a href="#!" ><img src="data1/tooltips/5.jpg" alt="" /></a>
-    <a href="#!" ><img src="data1/tooltips/6.jpg" alt="" /></a>
-    <a href="#!" ><img src="data1/tooltips/7.jpg" alt="" /></a>
-    <a href="#!" ><img src="data1/tooltips/8.jpg" /></a>
-    <a href="#!" ><img src="data1/tooltips/9.jpg" alt="" /></a>
-    <a href="#!" ><img src="data1/tooltips/10.jpg" alt="" /></a>
-    <a href="#!" ><img src="data1/tooltips/11.jpg" alt="" /></a>
-    <a href="#!" ><img src="data1/tooltips/12.jpg" alt="" /></a>
-    <a href="#!" ><img src="data1/tooltips/13.jpg" alt="" /></a>
-    <a href="#!" ><img src="data1/tooltips/14.jpg" alt="" /></a>
+<button id="button" >next</button>
+   <span id="span"> please fill the required fields</span>
   </div>
+    <!-- .container-fluid -->
 </div>
-    </div>  
-  <script type="text/javascript" src="engine1/wowslider.js"></script>
-  <script type="text/javascript" src="engine1/script.js"></script>
-  <div style="width:100%;padding-top:5%"></div>
-      <div  id="thanks">
-        <div class="layer1" id="pad1" style="height:31%;min-height:210px;width:10%;min-width:140px">
-          <img src="images/clock.png" style="margin-top:100%;width:100%"/>
-        </div>
 
-        <div class="layer1" id="pad2" style="height:31%;min-height:210px;width:23%;min-width:250px">
-          ScrollMagic is a complete rewrite of its predecessor Superscrollorama by John Polacek. 
-          <a href="http://scrollmagic.io" target="blank" >more..</a>
-
-        </div>
-
-        <div class="layer1" id="pad2-2" style="height:25%;min-height:150px;width:24%;min-width:270px">
-          The web is flat, but now you can fold it up. by Dan.
-          <a href="http://oridomi.com" target="blank">more..</a>
-        </div>
-
-        <div class="layer2" id="pad3" style="height:31%;min-height:180px;width:38%;min-width:400px">
-          SuperScrollorama is powered by TweenMax and the Greensock Tweening Engine.
-           <a href="http://johnpolacek.github.io/superscrollorama/" target="blank" >more..</a>
-        </div>
-
-        <div class="layer2" id="pad4" style="height:40%;min-height:220px;width:27%;min-width:320px">
-        </div>
-      
-    </div>
-    <script>
-
-    window.onload=myfunction;
-    function myfunction()
-    {
-    var layer1 = document.getElementsByClassName("layer1");
-    var length1=layer1.length;
-
-    var layer2 = document.getElementsByClassName("layer2");
-
-    var allleft=window.innerWidth/8;
-    //alert($(window).width());
-    for(i=0; i<3; i++)
-    {
-
-      layer1[i].style.left=allleft+"px";
-      allleft+=layer1[i].offsetWidth+ 0.0280726*$(window).width();
-    }
-
-        layer2[0].style.left=layer1[0].style.left
-    layer2[0].style.top=layer1[1].offsetHeight+ layer1[1].offsetTop+0.08477* $(window).height()+"px";
-
-    layer2[1].style.left=layer1[2].style.left
-    layer2[1].style.top=layer1[2].offsetHeight+ layer1[2].offsetTop+0.08477* $(window).height()+"px";
-
-var thanks=document.getElementById("thanks");
-    thanks.style.height=layer1[1].offsetHeight+layer2[1].offsetHeight+10+"px";
-  }
-  window.onresize= myfunction;
-
-  $.fn.animateRotate = function(start, end, duration) {
-  return this.each(function() {
-    var $elem = $(this);
-
-    $({deg: start}).animate({deg: end}, {
-      duration: duration,
-      step: function(now) {
-        $elem.css({
-           transform: 'rotate(' + now + 'deg)'
-         });
-      }
-    });
-  });
-};
-
-var fired_down=0;
-var fired_up=0;
-$(window).on("scroll",function(){
-  var height=$(window).height();
-  var position=$("#pad1").offset().top;
-  if(fired_down==0)
-  {
-    if($(window).scrollTop() + 5>= (position-height))
-    {
-      $('#pad1').animateRotate(-50, 0, 800);
-      $('#pad2').animateRotate(40, 0, 800);
-      $('#pad2-2').animateRotate(40, 0, 1000);
-      $('#pad3').animateRotate(-30, 0, 1000);
-      fired_down=1;
-      //fired_up=0;
-    }
-  }
-
-  if(fired_up==0)
-  {
-    if($(window).scrollTop() + 5 < (position-height))fired_down=0;
-      
-  }
-
-});
-</script>
-
-          
-
-    </div><!-- end gallery -->
-    <div id="footer">
-      <div class="social-icon">
-        <a href="mailto:zhouyi910821@gmail.com?Subject=Hi%20Kelsey" target="_top">email:zhouyi910821@gmail.com</a><br>
-
-      <a href="skype:kelsey.zhou1?call">skype:kelsey.zhou1</a>
-      &nbsp&nbsp&nbsp&nbsp&nbsp&nbspWechat:qq9898546144<br>
-
-        <a href="https://github.com/xiaoyi910821"><img src="images/github.png" /></a>
-               
-
-                  <a href="https://www.linkedin.com/pub/xiaoyi-zhou/89/a77/836"><img src="images/link copy.png" /></a>
-
-                   <a href="https://bitbucket.org/xiaoyizhou/"><img src="images/bitbucket.png" /></a>
-<a href="https://www.instagram.com/zhouyi910821/"> <img src="images/inst.png" /></a>
-      </div>
-                
-    </div><!-- end footer-->
-   
-
-</body>
-     <script src="jquery.collagePlus.min.js"></script>
-    <script src="jquery.removeWhitespace.min.js"></script>
-    <script src="jquery.collageCaption.min.js"></script>
-
-    <script type="text/javascript">
-
-
-    // All images need to be loaded for this plugin to work so
-    // we end up waiting for the whole window to load in this example
-    $(window).load(function () {
-
-
-
-
-        $("#loadmore").click(function(){
-          $('.effect-parent').show();
-            collage();
-            $('.Collage').collageCaption();
-            
-        });
-    });
-
-
-    // Here we apply the actual CollagePlus plugin
-    function collage() {
-        $('.Collage').removeWhitespace().collagePlus(
-            {
-                'fadeSpeed'     : 1800,
-                'targetHeight'  : 200
-            }
-        );
-    };
-
-    // This is just for the case that the browser window is resized
-    var resizeTimer = null;
-    $(window).bind('resize', function() {
-        // hide all the images until we resize them
-        $('.Collage .Image_Wrapper').css("opacity", 0);
-        // set a timer to re-apply the plugin
-        if (resizeTimer) clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(collage, 200);
-    });
-
-    </script>
-    <script type="text/javascript" src="PFold/js/jquery.pfold.js"></script>
-    <script type="text/javascript">
-      $(function() {
-
-        // say we want to have only one item opened at one moment
-        var opened = false;
-
-        $( 'div.uc-container' ).each( function( i ) {
-
-          var $item = $( this ), direction;
-
-          switch( i ) {
-            case 0 : direction = ['left','bottom']; break;
-            case 1 : direction = ['right','bottom']; break;
-             case 2 : direction = ['left','top']; break;
-
-          }
-          
-          var pfold = $item.pfold( {
-            folddirection : direction,
-            speed : 300,
-            onEndFolding : function() { opened = false; },
-          } );
-
-          $item.find( 'span.icon-eye' ).on( 'click', function() {
-
-            if( !opened ) {
-              opened = true;
-              pfold.unfold();
-            }
-
-
-          } ).end().find( 'span.icon-cancel' ).on( 'click', function() {
-
-            pfold.fold();
-
-          } );
-
-        } );
-        
-      });
-    </script>
-<script>
-$(window).load(function() {
   
-    $('html, body').animate({
-        scrollTop: $("#bg").offset().top
-    });
-    $("#resume-pannel").hide();
-    //$("[id=flower]").fadeTo(2000,1);
-    
-     
-      //$("#flowerA").animate({width: "500px"});
-   // $("#sfont").animate({fontSize: '30px'}, 900);
 
 
+  </section>
 
-    //$("#welcome").fadeTo(1500,1);
-
-
-    //$("#resume").animate({fontSize: '30px'}, 900);
-
-
-
-    $("#resume").click(function(){
-
-      $("body.mainpage").css('overflowY', 'hidden');
-      setTimeout(function(){
-        $("#resume-pannel").fadeTo(800,1);},2000);
-            setTimeout(function(){
-        $("#bg").fadeTo(100, 0);},3500);
-
-    });
-
-
-    $("#learn-more").click(function() {
-      // $("body.mainpage").css('overflowY', 'scroll');
-     
-    $('html, body').animate({
-        scrollTop: $("#edu-title").offset().top - $(window).height()+ $("#book").height()
-    }, 1000);
-   // alert($(window).scrollTop()-$(window).height());
-    //$("#resume-pannel").hide();
-
-    //$("body.mainpage").css('overflowY', 'scroll');
-    //if(document.getElementById("welcome").innerHTML !="welcome to my home page")setTimeout(function(){changeText($("#TypeEffect p"), $("#welcome"), 150)},800);
-  });
-
-    $("#go-top").click(function()
-    {
-      $('html,body').animate({
-        scrollTop:$("#bg").offset.top
-      });
-
-    });
-
-
-
-        /*function changeText(cont1, cont2, speed) {
-        var Otext = cont1.text();
-        var Ocontent = Otext.split("");
-        var i = 0;
-
-
-        function show() {
-            if (i < Ocontent.length) {
-                cont2.append(Ocontent[i]);
-                i = i + 1;
-            } else {
-                clearInterval(Otimer)
-            }
-        };
-        var Otimer = setInterval(show, speed);
-    };*/
-
-              // show indicators (requires debug extension)
-             // scene.addIndicators();
-           });
-</script>
-<script>
- //var x = $("#self").offset().top;
-//alert(x);
-  var height=$(window).height();
-  $(window).scroll(function(){
-    //alert($(window).scrollTop();
-   // alert($(window).scrollTop());
-  // alert($(window).height());
-
-         $("#edu-title, #edu-subtitle").css("opacity", 1-($(window).scrollTop()-0.388*height)/100);
-        $("#dragon, #catsleep, #flowerB").css("opacity", 1-($(window).scrollTop()-0.298*height)/100);
-
-        $("[id=nc]").css("opacity", ($(window).scrollTop()-0.52*height)/100);
-    
-    $("[id=nt]").css("opacity", ($(window).scrollTop()-0.61*height)/100);
-    $("#book").css("opacity", ($(window).scrollTop()-0.76*height)/100);
-
-   $("#im").css("opacity", ($(window).scrollTop()-0.64*height)/100);
-   $("[id=cc]").css("opacity", ($(window).scrollTop()-0.70*height)/100);
-    $("[id=snow]").css("opacity", ($(window).scrollTop()-0.731*height)/100);
-   $("[id=pc]").css("opacity", ($(window).scrollTop()-0.78*height)/100);
-    $("[id=pt]").css("opacity", ($(window).scrollTop()-0.895*height)/100);
-    $("#train, #scrollme").css("opacity", ($(window).scrollTop()-0.925*height)/100);
-    $("#bye").css("opacity", ($(window).scrollTop()-1.223*height)/100);
-     $("#hello, #gallery-title").css("opacity", ($(window).scrollTop()-1.343*height)/100);
-
-
-      $("#git").css("opacity", ($(window).scrollTop()-1.343*height)/700-0.1);
-    $("#overlay2").css("opacity", ($(window).scrollTop()-1.343*height)/400);
-    $("[id=time-title]").css("opacity", ($(window).scrollTop()-1.630*height)/170);
-   // $("#self").css("opacity", ($(window).scrollTop()-6.8029*height)/290);
-  // $(".layer1").css("opacity", ($(window).scrollTop()-6.2129*height)/290);
-    //$("#pad3").css("opacity", ($(window).scrollTop()-6.2129*height)/290);
-    
-  });
-</script>
-
-  <script src="fold/oridomi.min.js"></script>
-  <script src="fold/demo/demo.js"></script>
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+var ele=document.getElementsByClassName("selectpicker");
+var len=ele.length;
+var button=document.getElementById("button");
+var sp=document.getElementById("span");
 
-  ga('create', 'UA-72758417-1', 'auto');
-  ga('send', 'pageview');
+(function show_hide(){
+        $("#button").hover(function(){
+    $("#span").css("visibility", "visible");
+    }, function(){
+    $("#span").css("visibility", "hidden");
+  });
+      })();
 
-</script>
+
+
+//alert(button.disabled);
+for(var i=0;i<len;i++)
+{
+  if(i>0)ele[i].parentElement.parentElement.style.display="none";
+  ele[i].addEventListener('change', change);
+}
+function change()
+{
+
+
+  for(var i=0;i<len-1;i++)
+  {
+    if(ele[i].value!=""){
+      
+      //alert("test");
+      ele[i+1].parentElement.parentElement.parentElement.style.display="block";
+      //alert(ele[i+1].parentElement.style.display);
+      //ele[i+1].disabled=false;
+
+    }
+    else{
+      ele[i+1].value="";
+
+      ele[i+1].parentElement.parentElement.parentElement.style.display="none";   
+     
+      button.style.cursor = "not-allowed";
+       button.style.backgroundColor="#e8e8e8";
+        button.style.color="silver";
+        $("#button").hover(function(){
+    $("#span").css("visibility", "visible");
+    }, function(){
+    $("#span").css("visibility", "hidden");
+  });
+
+        $( "#button").unbind("click" );
+    }
+    if(ele[0].value!="" && ele[1].value!="" && ele[2].value!=""){
+      button.style.cursor = "pointer";
+      button.style.backgroundColor="#EBE4DD";
+       button.style.color="black";
+       $("#button").unbind("mouseenter mouseleave");
+      
+              $('#button').click(function(){
+          window.location = "http://abctoyota.totalcustomerconnect.com/portal/appointments.tcc";
+        });
+
+
+    }
+  }
+}
+
+
+    
+  </script>
+</body>
 
   </html>
