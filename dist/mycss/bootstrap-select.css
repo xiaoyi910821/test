@@ -281,12 +281,14 @@ select.selectpicker {
 }
 .control-label{
   color:white;
+  text-align: left;
 }
 .opt{
   color:silver;
   font-size: 12px;
   font-style: italic;
   margin-top: 10px;
+  text-align: right;
   width: 40px;
   padding: 0;
 
