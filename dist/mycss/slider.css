@@ -146,57 +146,6 @@
 	cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAABaSURBVEjH7ZMxCkAhDEOT8u9/5TpJ+xWkFse8IYutJgEB8RCHL1qCc90BEFnT6QH7mwgFHBUf8wJyS1TDLuc3vmighx37LZdIth3E5hKj9n6O0HRh+oJCiFcMxRUUDxR1CTMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTQtMDctMDdUMTM6NDk6MzgrMDI6MDDqf+sOAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE0LTA3LTA3VDEzOjQ5OjM4KzAyOjAwmyJTsgAAAABJRU5ErkJggg=="), move;
 }
 
-/* hide controls when video start play */
-#wowslider-container1.ws_video_playing .ws_bullets,
-#wowslider-container1.ws_video_playing .ws_fullscreen,
-#wowslider-container1.ws_video_playing .ws_next,
-#wowslider-container1.ws_video_playing .ws_prev {
-	display: none;
-}
-
-
-/* youtube/vimeo buttons */
-#wowslider-container1 .ws_video_btn {
-	position: absolute;
-	display: none;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 55;
-}
-#wowslider-container1 .ws_video_btn.ws_youtube,
-#wowslider-container1 .ws_video_btn.ws_vimeo {
-	display: block;
-}
-#wowslider-container1 .ws_video_btn div {
-	position: absolute;
-	background-image: url(./playvideo.png);
-	background-size: 200%;
-	top: 50%;
-	left: 50%;
-	width: 7em;
-	height: 5em;
-	margin-left: -3.5em;
-	margin-top: -2.5em;
-}
-#wowslider-container1 .ws_video_btn.ws_youtube div {
-	background-position: 0 0;
-}
-#wowslider-container1 .ws_video_btn.ws_youtube:hover div {
-	background-position: 100% 0;
-}
-#wowslider-container1 .ws_video_btn.ws_vimeo div {
-	background-position: 0 100%;
-}
-#wowslider-container1 .ws_video_btn.ws_vimeo:hover div {
-	background-position: 100% 100%;
-}
-
-#wowslider-container1 .ws_playpause.ws_hide {
-	display: none !important;
-}
 #wowslider-container1  .ws_bullets { 
 	padding: 6px;
   max-width: 40%;
@@ -224,10 +173,6 @@
 	
 	border-radius: 50%;
 }
-
-
-
-
 /* arrows */
 #wowslider-container1 a.ws_next, #wowslider-container1 a.ws_prev {
 	position:absolute;
